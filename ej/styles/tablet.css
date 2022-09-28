@@ -18,24 +18,18 @@ a:visited {
     color: white;
 }
 audio{
-    z-index: 2;
-    position: static;
-    align-self: center;
-    width:15vh;
-    margin-top: -12.5vh;
-    margin-bottom: 7.5vh;
+    position: relative;
+    top:-12.5vh;
+    width: 15vh;
+    margin-left: 2.5vh;
     height: 5vh;
-    float: inline-start;
-    opacity: 0;
-    display: inline;
     border-radius: 5px;
 }
-img:hover + audio{
-    opacity: 1;
+.audio-wrapper{
+    height: 20vh;
+    width: 20vh;
 }
-audio:hover{
-    opacity: 1;
-}
+
 
 button {
     background-color: #fffcfc;
