@@ -7,25 +7,32 @@
 
         <title>Amusicalado</title>
 
+        <!--Including stylesheets for desktop, tablet an mobile sizes-->
         <link rel="stylesheet" type="text/css" href="styles/desktop.css">
         <link rel="stylesheet" type="text/css" href="styles/tablet.css">
         <link rel="stylesheet" type="text/css" href="styles/mobile.css">
         <link rel="shortcut icon" href="images/stumbleupon.svg">
     </head>
     <body>
+        <!--Container for our flexbox grid-->
         <div id="main" class="wrapper">
+            <!--Header containg logo, title and sign/log in buttons-->
             <div id="header" class="wrapper">
                     <img src="images/stumbleupon.svg" alt="Logo de Amusicalado" id="logo">
+                    <!--Color inverted logo for tablet and mobile breakpoints-->
                     <img src="images/stumbleupon-inverted.svg" alt="Logo de Amusicalado" id="logo-inverted">
-                    <div id="title"><span><b>Amusicalado</b></span></div>
+                    <div id="title"><b>Amusicalado</b></div>
+                <!--Sign in and log in buttons -->
                 <div id="sign-log" class="wrapper">
                     <button id="signin">Sign in</button>
                     <button>Log in</button>
                 </div>
-
             </div>
-            <div id="content" class="wrapper">
-                <div id="menu" class="wrapper">
+
+            <!--Main content containign option menu, links and music catalog-->
+            <div id="main-content" class="wrapper">
+                <div id="sidebar-menu" class="wrapper">
+
                     <div id="first-option" class="option wrapper">
                         <div class="icon-wrapper wrapper"><img src="images/home.png" atl="Casa" class="icon"></div>
                         <div class="option-text wrapper">Home</div>
@@ -46,7 +53,10 @@
                         <div class="icon-wrapper wrapper"><img src="images/microphone.png" atl="Microfono" class="icon"></div>
                         <div class="option-text wrapper">Podcasts</div>
                     </div>
-                    <div id="separator" ></div>
+
+                    <!--Block to separate options from links-->
+                    <div id="separator"></div>
+
                     <div id="first-link" class="link wrapper">
                         <a href="privacy.html" target="_blank">Privacy policy</a>
                     </div>
@@ -57,8 +67,11 @@
                         <a href="premium.html" target="_blank">Try Premium</a>
                     </div>
                 </div>
-                <div id="music" class="wrapper">
-                    <h1 class="subtitle">Classical</h1>
+
+                <!--Music catalog, including three different genre-->
+                <div id="music-catalog" class="wrapper">
+                    <!--Classical music-->
+                    <h1 class="genre">Classical</h1>
                     <div class="section">
                         <div class="song wrapper">
                             <div class="audio-wrapper">
@@ -69,7 +82,6 @@
                             </div>
                             <h4 class="title-desc">Le quattro stagioni</h4> 
                         </div>
-
                         <div class="song wrapper">
                             <div class="audio-wrapper">
                                 <img src="images/gnossienne.jpg" class="title-img" alt="Gnossienne No.1">
@@ -107,7 +119,8 @@
                             <h4 class="title-desc">Nascence</h4>
                         </div>
                     </div>
-                    <h1 class="subtitle">Top hits</h1>
+                    <!--Some of the most listened music in Spain-->
+                    <h1 class="genre">Top hits</h1>
                     <div class="section">
                         <div class="song wrapper">
                             <div class="audio-wrapper">
@@ -155,7 +168,8 @@
                             <h4 class="title-desc">Caile</h4>
                         </div>
                     </div>
-                    <h1 class="subtitle">Electronic</h1>
+                    <!--Electronic music-->
+                    <h1 class="genre">Electronic</h1>
                     <div class="section">
                         <div class="song wrapper">
                             <div class="audio-wrapper">
@@ -205,6 +219,7 @@
                     </div>
                 </div>
             </div>
+            <!--Footer containing message to users-->
             <div id="footer">
                 <p>JOIN THE COMMUNITY !! Over 100.000 users are viving with us</p>
             </div>

@@ -1,7 +1,9 @@
+/*Tablet version*/
 @media only screen
-
 and (max-width: 768px)
 and (min-width: 600px){
+
+/*Place some margins on the sides of the screen*/    
 body{
     margin: 0 5px 0 5px;
     background-color: #fffcfc;
@@ -9,14 +11,15 @@ body{
 h1{
     color: #1E3932;
 }
-a:link {
+a{
     text-decoration: none;
     color: white;
 }
-a:visited {
-    text-decoration: none;
-    color: white;
+* {
+    font-family:'Times New Roman', Times, serif, Arial;
 }
+
+/*Places audio bubbles in the middle of the song image*/
 audio{
     position: relative;
     top:-12.5vh;
@@ -28,8 +31,12 @@ audio{
 }
 .audio-wrapper{
     height: 20vh;
+    border: #0b421a;
+    border-style: solid;
+    border-width: 5px;
     width: 20vh;
 }
+/*Audio bubble appears when hovering over the song image*/
 .title-img:hover + audio{
     opacity: 1;
 }
@@ -37,6 +44,7 @@ audio:hover{
     opacity: 1;
 }
 
+/*Sign in and log in buttons*/
 button {
     background-color: #fffcfc;
     border: 0;
@@ -49,18 +57,12 @@ button {
     vertical-align: middle;
     max-height: 35px;
 }
-
 button:hover {
     background-color: rgb(2, 20, 0);
     color: white;
 }
-#signin{
-}
 
-* {
-    font-family:'Times New Roman', Times, serif, Arial;
-}
-
+/*Flexbox wrappers*/
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -69,6 +71,26 @@ button:hover {
 .wrapper > div {  
     margin: 2px;
 }
+#main{
+    height: 100vh;
+}
+/*First row wrappers*/
+#header{
+    position: relative;
+    bottom: 7px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    width: 95.5vw;
+    flex: 1;
+    z-index: 1;
+    min-height: 50px;
+    align-self: center;
+}
+/*Second row wrappers*/
 .section{
     display: flex;
     flex-direction: row;
@@ -77,31 +99,73 @@ button:hover {
     padding: 0px;
     gap: 5vw;
 }
-.section > div{
-    height: 25vh;
-    margin-bottom: 2vh;
-    aspect-ratio: 4/5;
+.song{
+    color: rgb(2, 20, 0);
+    display: flex;
+    align-items: center;
 }
-.subtitle{
+#main-content{
+    background: #fffcfc;
+    flex-direction: row;
+    min-height: 70vh;
+    border-radius: 5px;
+    flex: 8;
+}
+#sidebar-menu{
+    flex: 1;
+}
+#music-catalog{
+    flex: 3;
+    align-items: center;
+    overflow-y: scroll;
+    height: 80vh;
+}
+/*Third row wrappers*/
+#footer{
+    color: #fffcfc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 1.4vmax;
+    letter-spacing: 0.3vw;
+    background: #0b421a;
+    bottom: 0;
+    border-radius: 5px;
+    flex: 1;
+    min-height: 3vh;
+    z-index: 3;
+}
+
+/*Name of the genre on the right side*/
+.genre{
     align-self: flex-start;
     margin: 4vh 0 2vh 4vw;
 }
+
+/*Music images mantain aspect ratio 1:1*/
 .title-img{
     width:20vh;
     aspect-ratio: 1/1;
 }
+/*Make image opaque when hovering over them*/
 div:hover > .title-img{
     opacity: 0.7;
 }
 
+/*Name of the song*/
 .title-desc{
     color: inherit;
     margin-top: 10px;
     font-size: 15px;
     padding-bottom: 20px;
+    max-width: 25vh;
     vertical-align: center;
     text-align: center;
 }
+
+/*Options*/
 .option{
     flex-direction: row;
 }
@@ -127,6 +191,27 @@ div:hover > .title-img{
     color: #fffcfc;
     flex: 7;
 }
+/*Rounding corners*/
+#first-option{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#last-option{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*Separator of links and options*/
+#separator{
+    background: #fffcfc !important;
+    flex: 5 !important;
+}
+/*Deletes cursor that appears when hovering*/
+#separator:hover{
+    cursor: unset;
+}
+
+/*Links*/
 .link{
     box-shadow: inset 0 0 0 0 #063813;
     color: #063813;
@@ -142,38 +227,40 @@ div:hover > .title-img{
 .link:hover{
     box-shadow: inset 1000px 0 0 0 rgb(2, 20, 0);
 }
-.song{
-    color: rgb(2, 20, 0);
-    display: flex;
-    align-items: center;
+.link > a{
+    padding-top: 1.5vh;
+    height: 100%;
+}
+/*Rounding corners*/
+#first-link{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#last-link{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-#main{
-    height: 100vh;
+/*Links and Options*/
+#sidebar-menu > div{
+    background: #0b421a;
+    cursor: pointer;    
+    margin: 2px;
+    flex:1;
+}
 
-}
-#header{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-    width: 95vw;
-    flex: 1;
-    margin-top: 17px;
-    margin-bottom: 17px;
-    z-index: 3;
-    min-height: 50px;
-    align-self: center;
-}
+/*Content of the header*/
+/*Logo for desktop*/
 #logo{
     display: none;
 }
 #logo-inverted{
-    height: 10000px;
-    width:5vh;
+    position: relative;
+    top: 20px;
+    width: 5vh;
+    z-index: 3;
     background-color: #0b421a;
+    margin-top: 5px;
     padding: 6px 40px 0px 40px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
@@ -204,70 +291,4 @@ div:hover > .title-img{
     border-radius: 5px;
     flex: 75;
 }
-
-#content{
-    background: #fffcfc;
-    flex-direction: row;
-    min-height: 70vh;
-    border-radius: 5px;
-    flex: 8;
-}
-#menu{
-    flex: 1;
-}
-#menu > div{
-    background: #0b421a;
-    cursor: pointer;    
-    margin: 2px;
-    flex:1;
-}
-#separator{
-    background: #fffcfc !important;
-    flex: 5 !important;
-}
-#separator:hover{
-    cursor: unset;
-}
-#music{
-    flex: 3;
-    align-items: center;
-    overflow-y: scroll;
-    height: 80vh;
-}
-#first-option{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-#last-option{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-#first-link{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-#last-link{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-#footer{
-    color: #fffcfc;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 100;
-    font-size: 1.4vmax;
-    letter-spacing: 0.3vw;
-    background: #0b421a;
-    bottom: 0;
-    border-radius: 5px;
-    flex: 1;
-    min-height: 3vh;
-    z-index: 3;
-}
-
-
-
 }
