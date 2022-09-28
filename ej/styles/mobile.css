@@ -1,3 +1,6 @@
+@media only screen
+
+and (max-width: 600px){
 body{
     margin: 0 5px 0 5px;
     background-color: #fffcfc;
@@ -43,11 +46,14 @@ button {
     padding: 6px 16px;
     text-align: center;
     vertical-align: middle;
+    max-height: 35px;
 }
 
 button:hover {
     background-color: rgb(2, 20, 0);
     color: white;
+}
+#signin{
 }
 
 * {
@@ -68,7 +74,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0px;
-    gap: 4vw;
+    gap: 5vw;
 }
 .section > div{
     height: 25vh;
@@ -90,7 +96,7 @@ div:hover > .title-img{
 .title-desc{
     color: inherit;
     margin-top: 10px;
-    font-size: 1.2vw;
+    font-size: 15px;
     padding-bottom: 20px;
     vertical-align: center;
     text-align: center;
@@ -103,17 +109,19 @@ div:hover > .title-img{
 }
 .icon-wrapper{
     flex: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 .icon{
-    width: 50%;
+    width: 30%;
 }
 .option-text{
+    display: none;
     font-weight: 100;
-    font-size: 1.5vw;
+    font-size: calc(5px + 1.5vw);
     letter-spacing: 0.7vw;
-    text-align: right;
+    text-align: left;
     justify-content: center;
     color: #fffcfc;
     flex: 7;
@@ -123,7 +131,7 @@ div:hover > .title-img{
     color: #063813;
     transition: color .1s ease-in-out, box-shadow .5s ease-in-out;
     font-weight: 100;
-    font-size: 1.5vw;
+    font-size: calc(7px + 1vw);
     letter-spacing: 0.7vw;
     text-align: center;
     justify-content: center;
@@ -135,6 +143,8 @@ div:hover > .title-img{
 }
 .song{
     color: rgb(2, 20, 0);
+    display: flex;
+    align-items: center;
 }
 
 #main{
@@ -142,30 +152,34 @@ div:hover > .title-img{
 
 }
 #header{
-    flex-direction: row;
-    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    border-radius: 5px;
     width: 100%;
     flex: 1;
+    min-height: 50px;
+    background-color: #0b421a;
     align-self: center;
 }
 #logo{
-    width: 100%;
-    flex: 5;
+    display: none;
+}
+#logo-inverted{
+    width:40px;
+    margin-right: 10px;
 }
 #title{
-    text-align: center;
-    margin: auto;
-    color: #1E3932;
-    letter-spacing: 2px;
-    font-size: 2.5vw;
-    flex: 20;
+    display: none;
+    height: 0px;  
 }
 #sign-log{
     background: #0b421a;
     flex-direction: row;
     gap: 0.5vw;
-    justify-content: end;
-    padding: 2vh 15px 2vh 0px;
+    justify-content: start;
+    align-items: center;
+    padding: 2vh 0px 2vh 15px;
     border-radius: 5px;
     flex: 75;
 }
@@ -173,6 +187,7 @@ div:hover > .title-img{
 #content{
     background: #fffcfc;
     flex-direction: row;
+    min-height: 70vh;
     border-radius: 5px;
     flex: 8;
 }
@@ -196,7 +211,7 @@ div:hover > .title-img{
     flex: 3;
     align-items: center;
     overflow-y: scroll;
-    height: 80vh;
+    height: 87vh;
 }
 #first-option{
     border-top-left-radius: 5px;
@@ -216,12 +231,10 @@ div:hover > .title-img{
 }
 
 #footer{
-    background: #0b421a;
-    border-radius: 5px;
-    flex: 1;
+    display: none;
 }
 
-
-
-
-
+#footer > p{
+    display: none;
+}
+}
