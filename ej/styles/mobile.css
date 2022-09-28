@@ -22,11 +22,18 @@ audio{
     width: 15vh;
     margin-left: 2.5vh;
     height: 5vh;
+    opacity: 0;
     border-radius: 5px;
 }
 .audio-wrapper{
     height: 20vh;
     width: 20vh;
+}
+.title-img:hover + audio{
+    opacity: 1;
+}
+audio:hover{
+    opacity: 1;
 }
 
 button {
